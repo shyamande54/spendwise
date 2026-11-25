@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spendwise"
+version = "1.0.0"
+description = "A tiny command-line expense tracker backed by SQLite."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "shyamande54" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+spendwise = "spendwise.cli:main"
+
+[tool.setuptools]
+packages = ["spendwise"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
